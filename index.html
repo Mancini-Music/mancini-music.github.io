@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mancini Music | Carol Mancini</title>
+<meta name="description" content="Mancini Music – music lessons, performance and collaboration with Carol Mancini.">
+<meta property="og:title" content="Mancini Music">
+<meta property="og:description" content="Music lessons, performance and collaboration with Carol Mancini.">
+<meta name="theme-color" content="#3b1d3a">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">Mancini <span>Music</span></a>
+    <button class="toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a class="cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="wrap">
+      <p class="eyebrow">Carol Mancini</p>
+      <h1 id="hero-title">Mancini Music</h1>
+      <p class="lead">Lessons, performance and musical collaboration, rooted in craft and shared with warmth.</p>
+      <a class="btn btn-gold" href="#contact">Get in touch</a>
+      <a class="btn btn-line" href="#services">See services</a>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="portrait" role="img" aria-label="Portrait placeholder for Carol Mancini">CM</div>
+      <div>
+        <h2 id="about-title">Meet Carol</h2>
+        <p>Carol Mancini is a music professional dedicated to helping people find their voice through sound. Replace this paragraph with Carol's story: her training, instruments, years of experience and what drives her.</p>
+        <p>Whether you're a first-time student, a seasoned performer or planning an event, Carol brings patience, expertise and a genuine love of music to every project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title">Services</h2>
+      <p class="sub">Ways to work with Carol. Edit these cards to match what she offers.</p>
+      <div class="cards">
+        <article class="card"><div class="icon" aria-hidden="true">🎹</div><h3>Private Lessons</h3><p>One-on-one instruction for all ages and levels, in person or online.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🎤</div><h3>Live Performance</h3><p>Weddings, events and venues, with a program tailored to your occasion.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🎼</div><h3>Composition &amp; Arrangement</h3><p>Original pieces and custom arrangements for ensembles and soloists.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">🎧</div><h3>Recording &amp; Production</h3><p>Session work, demos and polished tracks for your project.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" aria-labelledby="portfolio-title">
+    <div class="wrap">
+      <h2 id="portfolio-title">Portfolio</h2>
+      <p class="sub">Selected work and performances. Swap the placeholders for photos, videos or audio embeds.</p>
+      <div class="work">
+        <figure><div class="thumb" aria-hidden="true">♪</div><figcaption><strong>Featured Performance</strong><span>Venue · Year</span></figcaption></figure>
+        <figure><div class="thumb" aria-hidden="true">♫</div><figcaption><strong>Original Composition</strong><span>Ensemble · Year</span></figcaption></figure>
+        <figure><div class="thumb" aria-hidden="true">♬</div><figcaption><strong>Studio Recording</strong><span>Project · Year</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div>
+        <h2 id="contact-title">Contact</h2>
+        <p>Ready to book a lesson, plan an event or start a project? Send Carol a message and she'll get back to you soon.</p>
+        <p class="note">Email: <a href="mailto:carol@example.com">carol@example.com</a></p>
+      </div>
+      <form id="contact-form" data-endpoint="https://formspree.io/f/YOUR_FORM_ID" aria-describedby="form-status">
+        <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div>
+          <label for="topic">I'm interested in</label>
+          <select id="topic" name="topic">
+            <option>Private Lessons</option>
+            <option>Live Performance</option>
+            <option>Composition &amp; Arrangement</option>
+            <option>Recording &amp; Production</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button class="btn btn-gold" type="submit">Send message</button>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Mancini Music · Carol Mancini</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
