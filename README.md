@@ -1,14 +1,17 @@
 # Mancini Music
 
-Static website for Carol Mancini (HTML, CSS, JavaScript; no build step).
+Website for Carol Ann Mancini – voice and piano teacher, organist and choir director in Wadsworth, Ohio.
 
-- `index.html` – page content (Home, About, Services, Portfolio, Contact)
+Live site: https://jamesrflaherty-bit.github.io/Mancini-Music/
+
+Static site (HTML, CSS, JavaScript; no build step):
+- `index.html` – content (Home, About, Lessons & Services, Experience, Contact)
 - `styles.css` – design and responsive layout
-- `script.js` – mobile menu and contact form
+- `script.js` – mobile menu
 
-## To customize
-- Replace placeholder text, `carol@example.com` (in `index.html` and `script.js`), and portfolio items.
-- Contact form: create a free form at formspree.io and replace `YOUR_FORM_ID` in `index.html`. Without it, the form opens the visitor's email app.
+## Editing
+- Content comes from Carol's resume. Edit text directly in `index.html`.
+- To add a photo, save it as `carol.jpg` and replace the `CM` portrait placeholder in the About section with `<img src="carol.jpg" alt="Carol Ann Mancini">`.
 
 ## Deploy
-Hosted with GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
+GitHub Pages: Settings → Pages → Deploy from branch → `main` / root. Changes go live about a minute after each commit.
