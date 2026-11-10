@@ -2,7 +2,7 @@
 
 Website for Carol Ann Mancini – voice and piano teacher, organist and choir director in Wadsworth, Ohio.
 
-Live site: https://jamesrflaherty-bit.github.io/Mancini-Music/
+Live site: https://mancini-music.github.io/
 
 Static site (HTML, CSS, JavaScript; no build step):
 - `index.html` – content (Home, About, Lessons & Services, Experience, Contact)
