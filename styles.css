@@ -33,7 +33,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.94);backdro
 }
 
 /* Hero */
-.hero{background:linear-gradient(160deg,var(--plum) 0%,var(--plum-2) 100%);color:#fff;padding:110px 0 100px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(160deg,rgba(43,18,42,.93) 0%,rgba(90,45,87,.82) 100%),url("images/hero-organ.jpg?v=7") center 35%/cover no-repeat,var(--plum);color:#fff;padding:110px 0 100px;position:relative;overflow:hidden}
 .hero::after{content:"♪";position:absolute;right:6%;top:10%;font-size:20rem;line-height:1;color:rgba(240,220,178,.08);pointer-events:none}
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.85rem;color:var(--gold-soft);margin:0 0 14px}
 .hero h1{font-family:var(--serif);font-size:clamp(2.6rem,8vw,5rem);line-height:1.05;margin:0 0 20px}
@@ -117,6 +117,15 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 
 footer{background:var(--plum);color:#eadfe9;padding:34px 0;text-align:center;font-size:.95rem}
 footer a{color:var(--gold-soft)}
+.credits{margin:10px 0 0;font-size:.8rem;opacity:.75}
+
+/* Photo band */
+.photo-band{padding:0 0 84px}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:640px){.photo-grid{grid-template-columns:1fr}}
+.photo-grid figure{margin:0;position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/2;background:var(--gold-soft)}
+.photo-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(43,18,42,.85));color:#fff;font-family:var(--serif);font-size:1.25rem}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
