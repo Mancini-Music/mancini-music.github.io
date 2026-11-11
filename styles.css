@@ -90,6 +90,7 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 .highlights{margin:0;padding-left:20px}
 .highlights li{margin-bottom:12px;color:var(--muted)}
 .highlights strong{color:var(--ink)}
+.when{color:var(--plum-2);font-size:.9em;font-weight:600;white-space:nowrap}
 
 /* Contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
