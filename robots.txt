@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mancini-music.github.io/sitemap.xml
