@@ -38,7 +38,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.94);backdro
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.85rem;color:var(--gold-soft);margin:0 0 14px}
 .hero h1{font-family:var(--serif);font-size:clamp(2.6rem,8vw,5rem);line-height:1.05;margin:0 0 20px}
 .hero p.lead{font-size:1.25rem;max-width:560px;color:#eadfe9;margin:0 0 32px}
-.btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:600}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font:inherit;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer}
 .btn-gold{background:var(--gold);color:#1f1405}
 .btn-gold:hover{background:#cf9a3a}
 .btn-line{border-color:var(--gold-soft);color:#fff;margin-left:10px}
@@ -53,7 +53,6 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 
 /* About */
 .about{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center}
-.portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(135deg,var(--plum-2),var(--gold));display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:5rem;box-shadow:var(--shadow)}
 .emblem{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(160deg,var(--plum) 0%,var(--plum-2) 100%);color:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;position:relative;overflow:hidden}
 .emblem::before{content:"";position:absolute;inset:12px;border:1px solid rgba(240,220,178,.45);border-radius:10px;pointer-events:none}
 .emblem-note{font-size:4.5rem;line-height:1;color:var(--gold);margin-bottom:8px}
@@ -61,7 +60,7 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 .emblem-sub{font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft);font-style:italic;margin-top:4px}
 .emblem-rule{width:56px;height:2px;background:var(--gold);margin:18px 0 14px}
 .emblem-tag{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:#eadfe9}
-@media(max-width:760px){.about{grid-template-columns:1fr}.portrait,.emblem{max-width:280px;width:100%}}
+@media(max-width:760px){.about{grid-template-columns:1fr}.emblem{max-width:280px;width:100%}}
 
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
@@ -70,16 +69,6 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 .icon{width:48px;height:48px;border-radius:12px;background:var(--gold-soft);color:var(--plum);display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px}
 .card h3{font-family:var(--serif);margin:0 0 8px;color:var(--plum);font-size:1.3rem}
 .card p{margin:0;color:var(--muted)}
-
-/* Portfolio */
-.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.work figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.work .thumb{aspect-ratio:16/10;display:grid;place-items:center;font-size:3rem;color:#fff;background:linear-gradient(135deg,var(--plum),var(--plum-2))}
-.work figure:nth-child(2) .thumb{background:linear-gradient(135deg,var(--gold),#8a5f14)}
-.work figure:nth-child(3) .thumb{background:linear-gradient(135deg,#2f4a5a,var(--plum))}
-.work figcaption{padding:18px 22px}
-.work strong{display:block;font-family:var(--serif);color:var(--plum);font-size:1.15rem}
-.work span{color:var(--muted);font-size:.95rem}
 
 /* Stats strip */
 .stats{background:var(--surface);border-bottom:1px solid var(--line)}
@@ -92,7 +81,7 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 .exp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px}
 @media(max-width:860px){.exp-grid{grid-template-columns:1fr}}
 .col-title{font-family:var(--serif);color:var(--plum);font-size:1.35rem;margin:0 0 18px}
-.col-title + .highlights + .col-title,.highlights + .col-title{margin-top:36px}
+.highlights + .col-title{margin-top:36px}
 .timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--gold-soft)}
 .timeline li{position:relative;padding:0 0 24px;color:var(--muted)}
 .timeline li::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}
@@ -117,6 +106,7 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 
 footer{background:var(--plum);color:#eadfe9;padding:34px 0;text-align:center;font-size:.95rem}
 footer a{color:var(--gold-soft)}
+.foot-line{margin:0}
 .credits{margin:10px 0 0;font-size:.8rem;opacity:.75}
 
 /* Photo band */

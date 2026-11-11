@@ -1,26 +1,45 @@
-// Mobile navigation toggle
+'use strict';
+
+// Mobile navigation menu
 const toggle = document.querySelector('.toggle');
 const menu = document.getElementById('menu');
 
-function closeMenu() {
-  menu.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
+function setMenu(open) {
+  menu.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
 }
 
-toggle.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-});
+if (toggle && menu) {
+  toggle.addEventListener('click', () => {
+    setMenu(!menu.classList.contains('open'));
+  });
 
-menu.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A') closeMenu();
-});
+  // Close after choosing a link
+  menu.addEventListener('click', (e) => {
+    if (e.target.closest('a')) setMenu(false);
+  });
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menu.classList.contains('open')) {
-    closeMenu();
-    toggle.focus();
-  }
-});
+  // Close when clicking anywhere outside the menu
+  document.addEventListener('click', (e) => {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+      setMenu(false);
+    }
+  });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+  // Close with the Escape key and return focus to the button
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+
+  // Reset when the window grows past the mobile breakpoint
+  window.matchMedia('(min-width: 761px)').addEventListener('change', (mq) => {
+    if (mq.matches) setMenu(false);
+  });
+}
+
+// Keep the copyright year current
+const year = document.getElementById('year');
+if (year) year.textContent = String(new Date().getFullYear());
