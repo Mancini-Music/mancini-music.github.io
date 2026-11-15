@@ -116,7 +116,7 @@ h2{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.6rem);color:var(--plum)
 /* Contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 @media(max-width:760px){.contact{grid-template-columns:1fr}}
-.contact-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
 .contact-card .label{margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;color:var(--gold-text)}
 .phone{display:inline-block;font-family:var(--serif);font-size:2rem;color:var(--plum);text-decoration:none;margin:4px 0 20px}
 .phone:hover{text-decoration:underline}
@@ -155,7 +155,7 @@ footer a{color:var(--gold-soft)}
 /* What to Expect / FAQ */
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 @media(max-width:700px){.faq-grid{grid-template-columns:1fr}}
-.faq-item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:24px 26px}
+.faq-item{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius);padding:24px 26px}
 .faq-item h3{font-family:var(--serif);color:var(--plum);font-size:1.25rem;margin:0 0 8px}
 .faq-item p{margin:0;color:var(--muted)}
 .faq-item a{color:var(--plum-2);font-weight:600;white-space:nowrap}
