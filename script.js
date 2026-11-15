@@ -59,6 +59,52 @@ if (announce) {
   }
 }
 
+// Inquiry form (Formspree). Replace YOUR_FORM_ID in index.html with the real form ID to turn it on.
+const form = document.getElementById('inquiry-form');
+const formStatus = document.getElementById('form-status');
+const FALLBACK = 'Please text Carol at (774) 804-1274 or call (330) 590-1161.';
+
+function setStatus(message, kind) {
+  if (!formStatus) return;
+  formStatus.textContent = message;
+  formStatus.className = 'form-status' + (kind ? ' is-' + kind : '');
+}
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (form.action.includes('YOUR_FORM_ID')) {
+      setStatus('Online messages are not set up yet. ' + FALLBACK, 'error');
+      return;
+    }
+
+    const button = form.querySelector('button[type="submit"]');
+    if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+    setStatus('', '');
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!res.ok) throw new Error('Request failed');
+      form.reset();
+      setStatus('Thank you! Your message was sent. Carol will be in touch soon.', 'success');
+    } catch (err) {
+      setStatus('Sorry, your message could not be sent. ' + FALLBACK, 'error');
+    } finally {
+      if (button) { button.disabled = false; button.textContent = 'Send message'; }
+    }
+  });
+}
+
 // Keep the copyright year current
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());

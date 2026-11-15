@@ -17,3 +17,9 @@ Static site (HTML, CSS, and JavaScript; no build step):
 
 ## Deploy
 GitHub Pages: Settings → Pages → Deploy from a branch → `main` / root. Changes go live about a minute after each commit.
+
+## Contact form (Formspree)
+The "Send a message" form posts to Formspree. Until it is connected, it tells visitors to text or call instead.
+1. Create a free form at https://formspree.io and copy its form ID (the part after `/f/`).
+2. In `index.html`, replace `YOUR_FORM_ID` in the form's `action` with that ID.
+3. Messages will then arrive by email; the page's security policy already allows formspree.io.
