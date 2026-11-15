@@ -8,7 +8,7 @@ Static site (HTML, CSS, and JavaScript; no build step):
 - `index.html`: content (Home, About, Lessons & Services, Experience, Contact)
 - `styles.css`: design and responsive layout
 - `script.js`: mobile menu and copyright year
-- `images/`: stock photos from Unsplash (free to use under the Unsplash License; credited in the footer)
+- `images/`: stock photos from Unsplash (free to use under the Unsplash License, which does not require credit). `studio-piano.jpg` and `studio-music.jpg` are shown on the page; swap in real studio photos with the same names when available.
 
 ## Editing
 - Edit text directly in `index.html`. Content comes from Carol's resume and her Facebook page.
