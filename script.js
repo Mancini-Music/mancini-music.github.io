@@ -42,7 +42,10 @@ if (toggle && menu) {
 
 // Dismissible announcement bar (remembered per visitor; change the key for a new announcement)
 const announce = document.getElementById('announce');
-const ANNOUNCE_KEY = 'mm-announce-winter-spring-2027';
+// The holiday banner and the regular banner are remembered separately.
+const ANNOUNCE_KEY = document.body.classList.contains('holiday-theme')
+  ? 'mm-announce-holiday-2026'
+  : 'mm-announce-winter-spring-2027';
 if (announce) {
   let dismissed = false;
   try { dismissed = localStorage.getItem(ANNOUNCE_KEY) === '1'; } catch (err) { /* storage unavailable */ }

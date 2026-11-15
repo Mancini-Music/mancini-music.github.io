@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://mancini-music.github.io/images/hero-organ.jpg">
 <meta name="theme-color" content="#3b1d3a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%235a1f3a' stroke='%23d4a843' stroke-width='3'/%3E%3Cg fill='%23e9c46a'%3E%3Cpath d='M25 19 47 14v6l-22 5z'/%3E%3Crect x='25' y='21' width='3.2' height='23'/%3E%3Crect x='43.8' y='16' width='3.2' height='23'/%3E%3Cellipse cx='21.5' cy='44' rx='6.5' ry='4.8' transform='rotate(-20 21.5 44)'/%3E%3Cellipse cx='40.3' cy='39' rx='6.5' ry='4.8' transform='rotate(-20 40.3 39)'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=18">
+<link rel="stylesheet" href="styles.css?v=20">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,12 +68,14 @@
 }
 </script>
 </head>
-<body>
+<!-- HOLIDAY THEME: remove class="holiday-theme" below (in January) to return to the regular year-round design and announcement. -->
+<body class="holiday-theme">
 <a class="skip" href="#main">Skip to main content</a>
 
 <div class="announce" id="announce" role="region" aria-label="Studio announcement">
   <div class="wrap announce-inner">
-    <p>Now enrolling Winter &amp; Spring piano and voice students in Wadsworth <span class="announce-dot" aria-hidden="true">·</span> Holiday lesson gift certificates available.</p>
+    <p class="season-only"><span class="announce-star" aria-hidden="true">✦</span> Holiday Gift Certificates Available for Piano &amp; Voice Lessons <span class="announce-dot" aria-hidden="true">·</span> Now booking Christmas Eve &amp; Advent liturgy services.</p>
+    <p class="season-off">Now enrolling Winter &amp; Spring piano and voice students in Wadsworth <span class="announce-dot" aria-hidden="true">·</span> Holiday lesson gift certificates available.</p>
     <button class="announce-close" type="button" aria-label="Dismiss announcement">
       <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     </button>
@@ -99,6 +101,7 @@
 <main id="main">
   <section class="hero" id="home" aria-labelledby="hero-title">
     <div class="wrap">
+      <p class="season-badge season-only"><span aria-hidden="true">✦</span> Celebrating the Christmas Season <span class="badge-dot" aria-hidden="true">·</span> Winter Enrollment Now Open <span aria-hidden="true">✦</span></p>
       <p class="eyebrow">Carol Ann Mancini · Mancini Music Studio · Wadsworth, Ohio</p>
       <h1 id="hero-title">Mancini Music</h1>
       <p class="lead">Voice and piano teacher, organist, and choir director, sharing classical and sacred music for six decades.</p>
@@ -125,6 +128,7 @@
           <span class="plaque-sub">Music Studio</span>
           <span class="plaque-rule" aria-hidden="true"><span></span></span>
           <span class="plaque-tag">Piano &amp; Voice Lessons</span>
+          <span class="plaque-sparkles season-only" aria-hidden="true">✦ ✦ ✦</span>
           <span class="plaque-est">Est. 1990 · Wadsworth, Ohio</span>
         </div>
       </div>
@@ -161,6 +165,23 @@
         <article class="card"><div class="icon" aria-hidden="true">🌟</div><h3>Yearly Recitals</h3><p>Every student has the chance to perform in the studio's annual recital, a proud moment to share with family and friends.</p></article>
         <article class="card"><div class="icon" aria-hidden="true">💍</div><h3>Weddings &amp; Funerals</h3><p>Organist and soprano soloist for weddings, funerals, and memorial services, with music thoughtfully chosen together with each family.</p></article>
         <article class="card"><div class="icon" aria-hidden="true">⛪</div><h3>Liturgical Music</h3><p>Choir direction, cantoring, and substitute organist services for Sunday liturgies, Confirmation, Christmas, Holy Week, and Easter.</p></article>
+      </div>
+
+      <div class="holiday-callout season-only" role="region" aria-labelledby="holiday-callout-title">
+        <p class="hc-eyebrow"><span aria-hidden="true">✦</span> This Christmas Season <span aria-hidden="true">✦</span></p>
+        <h3 class="sr-only" id="holiday-callout-title">Christmas season at the studio</h3>
+        <div class="hc-grid">
+          <article class="hc-item">
+            <h4>Holiday Lesson Gift Certificates</h4>
+            <p>Give the gift of music. A 4-week starter pack of private piano or voice lessons in Wadsworth makes a thoughtful present from parents and grandparents.</p>
+            <a class="btn btn-gold" href="sms:+17748041274">Text about a gift certificate</a>
+          </article>
+          <article class="hc-item">
+            <h4>Christmas &amp; Advent Sacred Music</h4>
+            <p>Carol is available as organist and soprano soloist for parish liturgies and holiday services, including Advent and Christmas Eve. Dates fill quickly, so please inquire early.</p>
+            <a class="btn btn-line" href="#contact">Inquire about dates</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -348,6 +369,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=15"></script>
+<script src="script.js?v=19"></script>
 </body>
 </html>

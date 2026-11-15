@@ -202,3 +202,112 @@ footer a{color:var(--gold-soft)}
   html{scroll-behavior:auto}
   *{transition:none!important}
 }
+
+/* =====================================================================
+   HOLIDAY THEME: "Candlelight & Sacred Carols"
+   Everything below only applies when <body class="holiday-theme">.
+   Remove that class in January to return to the year-round design.
+   ===================================================================== */
+
+/* Seasonal-only and off-season content */
+body:not(.holiday-theme) .season-only{display:none!important}
+.holiday-theme .season-off{display:none!important}
+
+/* Palette: evergreen, candlelit cream, antique gold, cranberry */
+.holiday-theme{
+  --evergreen:#1B362D; --evergreen-2:#24473B; --evergreen-deep:#11251E;
+  --cranberry:#6E1E2A; --cranberry-2:#86283A;
+  --antique-gold:#C5A059;
+  --plum:var(--evergreen); --plum-2:var(--evergreen-2);
+  --gold:var(--antique-gold); --gold-text:#7a5a1c; --gold-soft:#efe3c8;
+  --bg:#FAF6EE; --line:#e6dcc8;
+  --shadow:0 10px 30px rgba(27,54,45,.12);
+}
+.holiday-theme header{background:rgba(250,246,238,.94);border-bottom-color:#e2d4b6}
+.holiday-theme .brand span{color:var(--gold-text)}
+.holiday-theme .menu a:hover{background:#f1e7d1}
+.holiday-theme .menu a.cta{background:var(--cranberry)}
+.holiday-theme .menu a.cta:hover{background:var(--cranberry-2)}
+
+/* Headings in evergreen with a delicate gold star beneath */
+.holiday-theme h2{color:var(--evergreen)}
+.holiday-theme main section:not(.hero) h2::after{content:"\2726";display:block;margin-top:8px;font-size:.85rem;line-height:1;color:var(--antique-gold)}
+.holiday-theme section.alt{border-color:#e6d7b5}
+
+/* Primary buttons in cranberry */
+.holiday-theme .btn-gold{background:var(--cranberry);color:#fff;border-color:rgba(197,160,89,.55)}
+.holiday-theme .btn-gold:hover{background:var(--cranberry-2)}
+
+/* Announcement bar */
+.holiday-theme .announce{background:var(--evergreen-deep);color:#f6efe0;border-bottom:1px solid rgba(197,160,89,.55)}
+.holiday-theme .announce-star,.holiday-theme .announce-dot{color:var(--antique-gold)}
+.holiday-theme .announce-close{color:#e9d9b4}
+
+/* Hero: evergreen candlelight with a warm glow */
+.holiday-theme .hero{background:
+  radial-gradient(ellipse 60% 70% at 78% 30%,rgba(232,190,110,.20),transparent 70%),
+  linear-gradient(160deg,rgba(13,31,25,.94) 0%,rgba(27,54,45,.86) 100%),
+  url("images/hero-organ.jpg?v=7") center 35%/cover no-repeat,var(--evergreen)}
+.holiday-theme .hero::after{color:rgba(197,160,89,.10)}
+.holiday-theme .hero .wrap{position:relative;z-index:1}
+.holiday-theme .eyebrow{color:#e9d9b4}
+.holiday-theme .hero p.lead{color:#efe7d6}
+.holiday-theme .btn-line{border-color:rgba(197,160,89,.8)}
+.season-badge{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 18px;padding:6px 16px;border:1px solid rgba(197,160,89,.7);border-radius:999px;background:rgba(17,37,30,.45);color:#f3e6c4;font-family:var(--serif);font-style:italic;font-size:.98rem;letter-spacing:.02em}
+.season-badge span[aria-hidden]{color:var(--antique-gold);font-style:normal}
+
+/* Gentle falling snow (CSS only; stops for visitors who prefer reduced motion) */
+.holiday-theme .hero::before{content:"";position:absolute;left:0;right:0;top:-260px;bottom:0;pointer-events:none;z-index:0;opacity:.55;
+  background-image:
+    radial-gradient(2px 2px at 30px 40px,rgba(255,250,236,.9) 50%,transparent 52%),
+    radial-gradient(1.5px 1.5px at 140px 110px,rgba(255,250,236,.8) 50%,transparent 52%),
+    radial-gradient(2.5px 2.5px at 210px 200px,rgba(255,246,226,.7) 50%,transparent 52%),
+    radial-gradient(1.5px 1.5px at 80px 230px,rgba(255,250,236,.75) 50%,transparent 52%),
+    radial-gradient(1px 1px at 180px 30px,rgba(255,250,236,.8) 50%,transparent 52%);
+  background-size:260px 260px;
+  animation:mm-snow 40s linear infinite}
+@keyframes mm-snow{from{transform:translateY(0)}to{transform:translateY(260px)}}
+@media(prefers-reduced-motion:reduce){.holiday-theme .hero::before{animation:none}}
+
+/* Stats, cards, timeline accents */
+.holiday-theme .stats{border-bottom-color:#e6d7b5}
+.holiday-theme .icon{background:#f1e5c9;color:var(--evergreen)}
+.holiday-theme .timeline{border-left-color:#e3d1a6}
+.holiday-theme .when{color:var(--cranberry)}
+.holiday-theme .pill{background:#f1e5c9;color:var(--evergreen)}
+.holiday-theme .photo-grid figcaption{background:linear-gradient(transparent,rgba(17,37,30,.86))}
+
+/* Studio plaque: evergreen with double antique-gold framing and sparkles */
+.holiday-theme .plaque{background:linear-gradient(145deg,#d9bd7c 0%,#a88442 45%,#e2c98d 70%,#9a7738 100%)}
+.holiday-theme .plaque-inner{background:radial-gradient(ellipse at 50% 28%,#2a5244 0%,var(--evergreen) 62%,#10241d 100%)}
+.holiday-theme .plaque-inner::before{inset:12px;border:2px solid rgba(197,160,89,.85)}
+.holiday-theme .plaque-inner::after{inset:18px;border:1px solid rgba(197,160,89,.5)}
+.holiday-theme .plaque-corner{border-color:var(--antique-gold)}
+.holiday-theme .plaque-note{color:var(--antique-gold)}
+.holiday-theme .plaque-sub{color:#ead9b0}
+.holiday-theme .plaque-rule{background:linear-gradient(90deg,transparent,var(--antique-gold) 30%,var(--antique-gold) 70%,transparent)}
+.holiday-theme .plaque-rule span{width:auto;height:auto;transform:translate(-50%,-50%);background:var(--evergreen);color:var(--antique-gold);font-size:.95rem;line-height:1;padding:0 6px}
+.holiday-theme .plaque-rule span::before{content:"\2726"}
+.plaque-sparkles{margin-top:20px;color:var(--antique-gold);letter-spacing:.6em;padding-left:.6em;font-size:.8rem}
+.holiday-theme .plaque-est{margin-top:10px;color:var(--antique-gold)}
+
+/* Holiday callout in Lessons & Services */
+.holiday-callout{margin-top:34px;position:relative;border-radius:var(--radius);padding:34px 30px 30px;color:#f6efe0;
+  background:radial-gradient(ellipse 70% 90% at 85% 0%,rgba(232,190,110,.16),transparent 70%),linear-gradient(160deg,#17302a,var(--evergreen) 60%,#132a22);
+  box-shadow:0 14px 36px rgba(17,37,30,.22)}
+.holiday-callout::before{content:"";position:absolute;inset:8px;border:1px solid rgba(197,160,89,.75);border-radius:10px;pointer-events:none}
+.holiday-callout::after{content:"";position:absolute;inset:13px;border:1px solid rgba(197,160,89,.35);border-radius:7px;pointer-events:none}
+.hc-eyebrow{position:relative;margin:0 0 18px;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:#ecd9a8}
+.hc-eyebrow span{color:var(--antique-gold);font-style:normal}
+.hc-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.hc-item{display:flex;flex-direction:column;align-items:flex-start}
+.hc-item + .hc-item{border-left:1px solid rgba(197,160,89,.35);padding-left:28px}
+.hc-item h4{margin:0 0 8px;font-family:var(--serif);font-size:1.35rem;color:#fff}
+.hc-item p{margin:0 0 18px;color:#e6ddca;flex:1}
+.holiday-callout .btn-line{color:#fff;margin-left:0}
+@media(max-width:760px){
+  .holiday-callout{padding:30px 22px 24px}
+  .hc-grid{grid-template-columns:1fr}
+  .hc-item + .hc-item{border-left:0;padding-left:0;border-top:1px solid rgba(197,160,89,.35);padding-top:24px}
+}
+@media(max-width:480px){.season-badge{font-size:.9rem;gap:6px;padding:6px 14px}.badge-dot{display:none}}
