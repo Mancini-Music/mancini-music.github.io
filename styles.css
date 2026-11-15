@@ -311,3 +311,6 @@ body:not(.holiday-theme) .season-only{display:none!important}
   .hc-item + .hc-item{border-left:0;padding-left:0;border-top:1px solid rgba(197,160,89,.35);padding-top:24px}
 }
 @media(max-width:480px){.season-badge{font-size:.9rem;gap:6px;padding:6px 14px}.badge-dot{display:none}}
+
+/* A lone last FAQ item spans the full width so the grid stays balanced */
+.faq-grid .faq-item:last-child:nth-child(odd){grid-column:1/-1}
