@@ -14,8 +14,8 @@
 <meta property="og:description" content="Voice and piano lessons, organ, and sacred music in Wadsworth, Ohio.">
 <meta property="og:image" content="https://mancini-music.github.io/images/hero-organ.jpg">
 <meta name="theme-color" content="#3b1d3a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b1d3a'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle' fill='%23e9c46a'%3E%E2%99%AB%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%235a1f3a' stroke='%23d4a843' stroke-width='3'/%3E%3Cg fill='%23e9c46a'%3E%3Cpath d='M25 19 47 14v6l-22 5z'/%3E%3Crect x='25' y='21' width='3.2' height='23'/%3E%3Crect x='43.8' y='16' width='3.2' height='23'/%3E%3Cellipse cx='21.5' cy='44' rx='6.5' ry='4.8' transform='rotate(-20 21.5 44)'/%3E%3Cellipse cx='40.3' cy='39' rx='6.5' ry='4.8' transform='rotate(-20 40.3 39)'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css?v=12">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,6 +44,15 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
+
+<div class="announce" id="announce" role="region" aria-label="Studio announcement">
+  <div class="wrap announce-inner">
+    <p>Now enrolling Winter &amp; Spring piano and voice students in Wadsworth <span class="announce-dot" aria-hidden="true">·</span> Holiday lesson gift certificates available.</p>
+    <button class="announce-close" type="button" aria-label="Dismiss announcement">
+      <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
 
 <header>
   <div class="wrap nav">
@@ -81,17 +90,21 @@
 
   <section id="about" aria-labelledby="about-title">
     <div class="wrap about">
-      <div class="emblem" aria-hidden="true">
-        <span class="emblem-note">♫</span>
-        <span class="emblem-name">Mancini</span>
-        <span class="emblem-sub">Music Studio</span>
-        <span class="emblem-rule"></span>
-        <span class="emblem-tag">Piano &amp; Voice Lessons</span>
+      <div class="plaque" role="img" aria-label="Mancini Music Studio – Piano and Voice Lessons – Established 1990, Wadsworth, Ohio">
+        <div class="plaque-inner">
+          <span class="plaque-corner tl"></span><span class="plaque-corner tr"></span><span class="plaque-corner bl"></span><span class="plaque-corner br"></span>
+          <svg class="plaque-note" aria-hidden="true" focusable="false" viewBox="0 0 48 48" width="44" height="44" fill="currentColor"><path d="M16 9 41 3v6L16 15z"/><rect x="16" y="11" width="3" height="26"/><rect x="38" y="5" width="3" height="26"/><ellipse cx="13" cy="37" rx="6.5" ry="4.8" transform="rotate(-20 13 37)"/><ellipse cx="35" cy="31" rx="6.5" ry="4.8" transform="rotate(-20 35 31)"/></svg>
+          <span class="plaque-name">Mancini</span>
+          <span class="plaque-sub">Music Studio</span>
+          <span class="plaque-rule" aria-hidden="true"><span></span></span>
+          <span class="plaque-tag">Piano &amp; Voice Lessons</span>
+          <span class="plaque-est">Est. 1990 · Wadsworth, Ohio</span>
+        </div>
       </div>
       <div>
         <h2 id="about-title">Meet Carol</h2>
         <p>Carol Ann Mancini began playing the organ for Sunday liturgies in Milford, Massachusetts, in 1965, and music has been at the center of her life ever since. Today she is Choir Director and Organist at St. Andrew the Apostle Parish in Norton, Ohio. She has taught piano and voice since 1990, and at Mancini Music Studio in Wadsworth her students share their progress at a recital each year.</p>
-        <p>Carol trained in classical organ at St. Paul's Cathedral in Worcester, Massachusetts (MA), with Mr. Luke Richard, and studied classical voice with Estelle McCausland and with international opera singer Luisa Valasco Westfall. As a soprano soloist, she has sung Handel's <em>Messiah</em> and Fauré's <em>Requiem</em>, and she performed Mozart's <em>Vesperae solennes de confessore</em> with the Toledo Chamber Orchestra. She also sang Bach's <em>Mass in B minor</em> as a member of the Toledo Symphony Chorale.</p>
+        <p>Carol trained in classical organ at St. Paul's Cathedral in Worcester, Massachusetts, with Mr. Luke Richard, and studied classical voice with Estelle McCausland and with international opera singer Luisa Valasco Westfall. As a soprano soloist, she has sung Handel's <em>Messiah</em> and Fauré's <em>Requiem</em>, and she performed Mozart's <em>Vesperae solennes de confessore</em> with the Toledo Chamber Orchestra. She also sang Bach's <em>Mass in B minor</em> as a member of the Toledo Symphony Chorale.</p>
         <p>Whether she is preparing a student for a college audition, leading a choir through Holy Week, or playing for a wedding, Carol brings the same care, patience, and love of music.</p>
       </div>
     </div>
@@ -135,7 +148,7 @@
           <ol class="timeline">
             <li><span class="yr">2025–present</span><strong>St. Andrew the Apostle Parish, Norton, OH</strong>Choir Director and Organist</li>
             <li><span class="yr">2017–2024</span><strong>Sacred Heart of Jesus Parish, Wadsworth, OH</strong>Teen Choir Director and Organist</li>
-            <li><span class="yr">2008–2011</span><strong>American Guild of Organists, Worcester Chapter, Worcester, Massachusetts (MA)</strong>Member; substitute organist for area churches, playing for all liturgies</li>
+            <li><span class="yr">2008–2011</span><strong>American Guild of Organists, Worcester Chapter, Worcester, Massachusetts</strong>Member; substitute organist for area churches, playing for all liturgies</li>
             <li><span class="yr">2007–2011</span><strong>St. Michael's Parish, Mendon, MA</strong>Organist and adult choir director for Sunday liturgies, Confirmation, Christmas Eve, Holy Week, and Easter; organist and soloist for weddings and funerals; Liturgy Committee member</li>
             <li><span class="yr">1989–1993</span><strong>St. Agnes Parish, Orrville, OH</strong>Adult choir director for Sunday liturgies, Christmas, Easter, Confirmation, and RCIA; Liturgy Committee member</li>
             <li><span class="yr">1965–1973</span><strong>Sacred Heart of Jesus Parish, Milford, MA</strong>Organist for Sunday liturgies, Confirmation, First Holy Communion, weddings, and funerals</li>
@@ -154,7 +167,7 @@
           <ul class="highlights">
             <li><strong>Voice performance</strong> <span class="when">(1987–1990)</span> with international opera singer Luisa Valasco Westfall (Royal Conservatory of Madrid; Akademie Mozarteum, Salzburg; Austria, Germany, and the USA)</li>
             <li><strong>Classical voice</strong> <span class="when">(1971–1973)</span> with Estelle McCausland and a teacher from the New England Conservatory, with studies in Italian, Latin, French, and English</li>
-            <li><strong>Classical organ</strong> <span class="when">(1967–1973)</span> with Mr. Luke Richard at St. Paul's Cathedral, Worcester, Massachusetts (MA)</li>
+            <li><strong>Classical organ</strong> <span class="when">(1967–1973)</span> with Mr. Luke Richard at St. Paul's Cathedral, Worcester, Massachusetts</li>
             <li><strong>Classical organ</strong> <span class="when">(1964–1966)</span> with the Rev. David Gallagher in Milford and Wellesley, MA</li>
           </ul>
         </div>
@@ -178,7 +191,7 @@
           <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.23 2.68.23v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
           Carol on Facebook<span class="sr-only"> (opens in a new tab)</span>
         </a>
-        <p class="note">Piano lessons for students ages 7 and up, and voice lessons for ages 12 and up. New students are welcome; fall lessons begin each September.</p>
+        <p class="note">Piano lessons for students ages 7 and up, and voice lessons for ages 12 and up. New students are welcome year-round as studio openings become available.</p>
       </div>
     </div>
   </section>
@@ -191,6 +204,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=10"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>

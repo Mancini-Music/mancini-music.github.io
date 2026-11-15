@@ -40,6 +40,25 @@ if (toggle && menu) {
   });
 }
 
+// Dismissible announcement bar (remembered per visitor; change the key for a new announcement)
+const announce = document.getElementById('announce');
+const ANNOUNCE_KEY = 'mm-announce-winter-spring-2027';
+if (announce) {
+  let dismissed = false;
+  try { dismissed = localStorage.getItem(ANNOUNCE_KEY) === '1'; } catch (err) { /* storage unavailable */ }
+  if (dismissed) announce.hidden = true;
+
+  const close = announce.querySelector('.announce-close');
+  if (close) {
+    close.addEventListener('click', () => {
+      announce.hidden = true;
+      try { localStorage.setItem(ANNOUNCE_KEY, '1'); } catch (err) { /* storage unavailable */ }
+      const skip = document.querySelector('.skip');
+      if (skip) skip.focus();
+    });
+  }
+}
+
 // Keep the copyright year current
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
